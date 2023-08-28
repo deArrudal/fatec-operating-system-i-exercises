@@ -7,7 +7,7 @@ All the reference material can be found in ["Operating Systems I [Portuguese]"](
 
 This repository presents some simple exercises using Operating Systems (OS) concepts, such as:
 - Performance impact;
-
+- System Processes;
 
 ## Getting Started
 
@@ -43,7 +43,9 @@ PROJECTS - OPERATION SYSTEM
 ## Version History
 
 * 0.1
-    * Initial Release
+    * Add Lecture 1 - Comparison
+* 0.2
+    * Add Lecture 2 - System Information
 
 ## License
 
