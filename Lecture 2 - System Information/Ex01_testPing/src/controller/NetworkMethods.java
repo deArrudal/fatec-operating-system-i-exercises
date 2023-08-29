@@ -30,7 +30,7 @@ public class NetworkMethods {
             while (scanProcess.hasNextLine()) {
                 tmpLine = scanProcess.nextLine();
 
-                if (tmpLine != "") {
+                if (!tmpLine.isEmpty()) {
                     if (!tmpLine.contains("  ")) { // look for device name.
                         if (os.contains("Windows")) {
                             deviceName = tmpLine.split(":")[0];
@@ -47,7 +47,7 @@ public class NetworkMethods {
                         } else if (os.contains("Linux")) {
                             tmpLine = tmpLine.trim();
                             tmpLine = tmpLine.split(" ")[1];
-                            deviceIPV4 = tmpLine.split("/")[0];
+                            deviceIPV4 = tmpLine.split("/")[0];   
                         }
 
                         if (deviceIPV4 != "") { // if IPv4 not-null, display.
@@ -58,6 +58,7 @@ public class NetworkMethods {
             }
 
             scanProcess.close();
+
             System.out.println();
 
         } catch (Exception exception) {
@@ -86,24 +87,31 @@ public class NetworkMethods {
                 tmpLine = scanProcess.nextLine();
                 System.out.print("-");
 
-                if (tmpLine != "") {
-                    if (tmpLine.contains("Pinging") || tmpLine.contains("PING")) {
-                        if(os.contains("Windows")) {
+                if (!tmpLine.isEmpty()) {
+                    if (tmpLine.contains("Pinging") || tmpLine.contains("PING") ||
+                            tmpLine.contains("Disparando")) {
+                        if (os.contains("Windows")) {
                             pingInfo = tmpLine.split(":")[0];
-                        } else if(os.contains("Linux")) {
+
+                        } else if (os.contains("Linux")) {
                             pingInfo = tmpLine;
                         }
-                    } else if (tmpLine.contains("Average") || tmpLine.contains("avg")) {
-                        if(os.contains("Windows")) {
+
+                    } else if (tmpLine.contains("Average") || tmpLine.contains("avg") ||
+                            tmpLine.contains("Média")) {
+                        if (os.contains("Windows")) {
                             pingData = tmpLine.split(" = ")[3];
-                        } else if(os.contains("Linux")) {
+
+                        } else if (os.contains("Linux")) {
                             pingData = tmpLine.split("/")[4] + "ms";
                         }
+                        
                     }
                 }
             }
 
             scanProcess.close();
+
             System.out.println("\n" + pingInfo + " -> Average = " + pingData);
             System.out.println();
 

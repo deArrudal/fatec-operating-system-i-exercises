@@ -27,6 +27,7 @@ public class Methods {
 
         if (flagPath == JFileChooser.APPROVE_OPTION) {
             filePath = fileChooser.getSelectedFile().getAbsolutePath();
+
         } else {
             JOptionPane.showMessageDialog(null, "File not found",
                     "Run File - Windows", JOptionPane.ERROR_MESSAGE);
@@ -36,6 +37,11 @@ public class Methods {
     }
 
     public void runFilePath(String filePath) {
+        if (filePath.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Invalid entry",
+                    "Run File - Windows", JOptionPane.ERROR_MESSAGE);
+        }
+
         try {
             String cmdExe = "cmd /c start cmd.exe /C\"" + filePath + "\"";
             Runtime.getRuntime().exec(cmdExe);

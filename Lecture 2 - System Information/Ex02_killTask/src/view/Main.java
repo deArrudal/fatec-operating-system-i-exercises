@@ -45,6 +45,7 @@ public class Main {
                     System.out.println("=> Invalid option");
                     System.out.println();
             }
+            
         } while (option != 9);
 
         scan.close();
