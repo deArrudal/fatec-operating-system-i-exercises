@@ -50,6 +50,7 @@ PROJECTS - OPERATION SYSTEM
     * Add Lecture 3 - Threads
 * 0.4
     * Add Lecture 4 - Threads Set 1
+    * Add Lecture 4 - Threads Set 2
 
 ## License
 
