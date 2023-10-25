@@ -51,6 +51,8 @@ PROJECTS - OPERATION SYSTEM
 * 0.4
     * Add Lecture 4 - Threads Set 1
     * Add Lecture 4 - Threads Set 2
+* 0.5
+    * Add Lecture 5 - Read and Write Files 
 
 ## License
 
