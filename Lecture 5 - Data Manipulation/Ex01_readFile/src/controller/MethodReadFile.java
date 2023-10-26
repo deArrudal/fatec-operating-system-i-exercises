@@ -19,18 +19,18 @@ public class MethodReadFile {
         }
 
         String line;
-        String[] sliptline = new String[4]; // FOOD NAME,SCIENTIFIC NAME,GROUP,SUB GROUP
+        String[] splitline = new String[4]; // FOOD NAME,SCIENTIFIC NAME,GROUP,SUB GROUP
         boolean header = true; // allow to display header.
 
         Scanner scan = new Scanner(fileName);
 
         while (scan.hasNextLine()) {
             line = scan.nextLine();
-            sliptline = line.split(",");
+            splitline = line.split(",");
 
-            if (sliptline[2].equals("Fruits") || header) {
+            if (splitline[2].equals("Fruits") || header) {
                 System.out.printf("%25s\t%45s\t%20s\n",
-                        sliptline[0], sliptline[1], sliptline[3]);
+                        splitline[0], splitline[1], splitline[3]);
 
                 header = false;
             }
