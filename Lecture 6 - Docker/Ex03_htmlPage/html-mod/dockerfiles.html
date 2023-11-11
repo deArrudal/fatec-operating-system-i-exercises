@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<style>
+    p {
+        padding-left: 35px;
+    }
+</style>
+
+<head>
+    <title>Projeto HTML Docker</title>
+</head>
+
+<body>
+    <menu>
+        <p style="padding-left: 0;">
+            <a href="index.html">Index</a> |
+            <a href="docker.html">Docker</a> |
+            <a href="comandos.html">Principais Comandos Docker</a> |
+            <a href="dockerfiles.html">Comandos Dockerfile</a>
+        </p>
+    </menu>
+
+    <h1 style="text-align:center;">Dockerfile - Comandos</h1>
+
+    <p>
+        Arquivo: <b>Dockerfile</b><br />
+        Para gerar uma imagem a partir de Dockerfile: docker build -t nome_imagem.
+    </p>
+
+    <p><b><i>Comandos Dockerfile</i></b>:</p>
+
+    <p><b>FROM</b> - Chamada da imagem que será base para a construção da minha imagem.</p>
+    <p><b>RUN</b> - Permitir a execução de comandos na montagem da imagem.</p>
+    <p><b>CMD x ENTRYPOINT</b> - Executam um determinado comando na inicialização do container
+        gerado a partir da imagem customizada por Dockerfile.</p>
+    <p><b>COPY x ADD</b> - Permitem a cópia de 1 ou mais arquivos para uma pasta específica
+        da imagem.</p>
+    <p><b>ADD</b> - Serve para copiar arquivos compactados (tar), descompactando na cópia.</p>
+    <p><b>EXPOSE</b> - Informa qual porta deverá ser liberada.</p>
+    <p><b>VOLUME</b> - Determina o ponto de montagem para uma pasta que ficará disponível
+        entre host e container.</p>
+    <p><b>WORKDIR</b> - Determina o diretório de trabalho. Na criação do container a partir
+        da imagem customizada, passa a ser o diretório padrão.</p>
+    <p><b>USER</b> - Define o usuário que executa comandos.</p>
+    <p><b>LABEL</b> - Define o mantenedor da imagem.</p>
+</body>
+
+</html>

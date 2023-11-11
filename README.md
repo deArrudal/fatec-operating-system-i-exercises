@@ -53,6 +53,8 @@ PROJECTS - OPERATION SYSTEM
     * Add Lecture 4 - Threads Set 2
 * 0.5
     * Add Lecture 5 - Read and Write Files 
+* 0.6
+    * Add Lecture 6 - Docker files 
 
 ## License
 
